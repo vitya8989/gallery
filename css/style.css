@@ -74,10 +74,10 @@ h6 {
   font-weight: 700
 }
 @font-face {
-  font-family: HelveticaNeue;
+  font-family: akrobat;
   font-display: swap;
-  src: url("../fonts/Helvetica Neue Condensed Bold.woff") format("woff"),url("../fonts/Helvetica Neue Condensed Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url(../fonts/akrobat-regular.woff) format("woff"),url(../fonts/akrobat-regular.woff2) format("woff2");
+  font-weight: 400;
   font-style: normal
 }
 @font-face {
@@ -85,6 +85,13 @@ h6 {
   font-display: swap;
   src: url(../fonts/HelveticaNeue-CondensedRegular.woff) format("woff"),url(../fonts/HelveticaNeue-CondensedRegular.woff2) format("woff2");
   font-weight: 400;
+  font-style: normal
+}
+@font-face {
+  font-family: HelveticaNeue;
+  font-display: swap;
+  src: url("../fonts/Helvetica Neue Condensed Bold.woff") format("woff"),url("../fonts/Helvetica Neue Condensed Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal
 }
 body {
@@ -272,7 +279,7 @@ body.scroll-lock {
   height: 9px;
   position: static;
   background: url(../img/icons/arrow_right.svg) 0 0/100% 100% no-repeat;
-  margin-top: 2px
+  margin-top: 4px
 }
 .gallery-slider__btn-next.swiper-button-next:hover,
 .gallery-slider__btn-prev.swiper-button-prev:hover {
@@ -287,6 +294,7 @@ body.scroll-lock {
   max-width: 42px
 }
 .gallery-slider__pagination.swiper-pagination-fraction {
+  font-family: akrobat;
   font-size: 16px;
   letter-spacing: .1em;
   color: #000
@@ -387,7 +395,7 @@ body.scroll-lock {
   height: 9px;
   position: static;
   background: url(../img/icons/arrow_right.svg) 0 0/100% 100% no-repeat;
-  margin-top: 2px
+  margin-top: 4px
 }
 .main-events-slider__btn-next.swiper-button-next:hover,
 .main-events-slider__btn-prev.swiper-button-prev:hover {
@@ -402,6 +410,7 @@ body.scroll-lock {
   max-width: 42px
 }
 .main-events-slider__pagination.swiper-pagination-fraction {
+  font-family: akrobat;
   font-size: 16px;
   letter-spacing: .1em;
   color: #000
@@ -611,7 +620,7 @@ body.scroll-lock {
   height: 9px;
   position: static;
   background: url(../img/icons/arrow_right_white.svg) 0 0/100% 100% no-repeat;
-  margin-top: 2px
+  margin-top: 4px
 }
 .about-slider__btn-next.swiper-button-next:hover,
 .about-slider__btn-prev.swiper-button-prev:hover {
@@ -626,6 +635,7 @@ body.scroll-lock {
   max-width: 42px
 }
 .about-slider__pagination.swiper-pagination-fraction {
+  font-family: akrobat;
   font-size: 16px;
   letter-spacing: .1em;
   color: #fff
@@ -856,10 +866,12 @@ body.scroll-lock {
   background: url(../img/icons/clock.svg) 1.5px 1px/15px 15px no-repeat
 }
 .footer-contacts__email {
+  display: block;
   margin: 23px 0 0 0;
   background: url(../img/icons/letter.svg) 0 2px/18px 13px no-repeat
 }
 .footer-contacts__phone {
+  display: block;
   margin: 34px 0 0 0;
   background: url(../img/icons/phone.svg) 1px 2px/15px 15px no-repeat
 }
