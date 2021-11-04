@@ -20,6 +20,11 @@ let nav = document.querySelector('.nav');
 
 burger.onclick = function () {
 	nav.classList.toggle('open-menu');
+	if (body.classList.contains('scroll-lock')) {
+		unlockPadding();
+	} else {
+		lockPadding();
+	}
 };
 let gallerySlider = new Swiper('.gallery-slider', {
 	slidesPerView: 1,
@@ -38,18 +43,19 @@ gallerySlider.on('slideChange', function () {
 	addNull();
 });
 
+reinitSwiper(gallerySlider);
 
 
 ;
-let eventsSlider = new Swiper('.events-slider', {
+let eventsSlider = new Swiper('.main-events-slider', {
 	slidesPerView: 1,
 	spaceBetween: 20,
 	navigation: {
-		nextEl: '.events-slider__btn-next',
-		prevEl: '.events-slider__btn-prev'
+		nextEl: '.main-events-slider__btn-next',
+		prevEl: '.main-events-slider__btn-prev'
 	},
 	pagination: {
-		el: '.events-slider__pagination',
+		el: '.main-events-slider__pagination',
 		type: 'fraction',
 	},
 	autoHeight: true,
@@ -59,6 +65,75 @@ eventsSlider.on('slideChange', function () {
 	addNull();
 });
 
+reinitSwiper(eventsSlider);
+;
+let aboutSlider = new Swiper('.about-slider', {
+	slidesPerView: 1,
+	navigation: {
+		nextEl: '.about-slider__btn-next',
+		prevEl: '.about-slider__btn-prev'
+	},
+	pagination: {
+		el: '.about-slider__pagination',
+		type: 'fraction',
+	},
+});
+
+aboutSlider.on('slideChange', function () {
+	addNull();
+});
+;
+let howFindTitle = document.querySelector('.how-find__title');
+let howFindContent = document.querySelector('.how-find__content');
+let howFindBody = document.querySelector('.how-find__body');
+
+if (window.innerWidth < 1051) {
+	howFindContent.append(howFindTitle);
+}
+
+window.onresize = function () {
+	if (window.innerWidth < 1051) {
+		howFindContent.append(howFindTitle);
+	} else {
+		howFindBody.prepend(howFindTitle);
+	}
+}
+
+let scriptMap = document.createElement('script');
+scriptMap.src = 'https://api-maps.yandex.ru/2.1/?apikey=dd0f5e76-e8bb-42be-b558-f7af3b491cd2&lang=ru_RU';
+setTimeout(() => document.head.append(scriptMap), 1000);
+scriptMap.onload = function () {
+	ymaps.ready(init);
+};
+
+function init() {
+	var myMap = new ymaps.Map("map", {
+		center: [59.920163, 30.346132],
+		zoom: 17
+	});
+	var placemark = new ymaps.Placemark([59.920163, 30.346132], {
+		iconColor: '#FF0000',
+		iconCaption: 'Социалистическая ул., 21'
+	}
+	);
+	myMap.geoObjects.add(placemark);
+};
+let footerContacts = document.querySelector('.footer-contacts');
+let footerMenu = document.querySelector('.footer-menu');
+let footerTopContent = document.querySelector('.footer-top__content');
+let footerSocial = document.querySelector('.footer-social');
+
+if (window.innerWidth < 611) {
+	footerTopContent.insertBefore(footerMenu, footerContacts);
+}
+
+window.onresize = function () {
+	if (window.innerWidth < 611) {
+		footerTopContent.insertBefore(footerMenu, footerContacts);
+	} else {
+		footerTopContent.insertBefore(footerMenu, footerSocial);
+	}
+}
 ;
 
 function addNull() {
@@ -75,3 +150,22 @@ function addNull() {
 }
 
 addNull();
+
+function reinitSwiper(swiper) {
+	setTimeout(function () {
+		swiper.update();
+	}, 200);
+}
+
+let body = document.body;
+let wrapper = document.querySelector('.wrapper');
+let scrollBarWidth = window.innerWidth - wrapper.offsetWidth + "px";
+
+function lockPadding() {
+	body.classList.add('scroll-lock');
+	wrapper.style.paddingRight = scrollBarWidth;
+}
+function unlockPadding() {
+	body.classList.remove('scroll-lock');
+	wrapper.style.paddingRight = "0";
+}
