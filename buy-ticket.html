@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Купить билет</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__container">
+		<div class="header__content">
+			<div class="header__logo">
+				<img src="img/header-logo.png" alt="">
+			</div>
+			<div class="header__links">
+				<nav class="header__nav nav">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
+						<li class="nav__item"><a href="events.html" class="nav__link">События</a></li>
+						<li class="nav__item"><a href="news.html" class="nav__link">Новости</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Аренда</a></li>
+						<li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header__basket">
+					<a href="#"><img src="img/icons/basket.svg" alt=""><span>7</span></a>
+				</div>
+				<div class="header__burger">
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+		<main>
+			<section class="buy">
+				<div class="buy__container">
+					<div class="buy__content">
+						<div class="buy__url">
+							<a href="index.html">Главная</a> / Форма бронирования
+						</div>
+						<h1 class="buy__title">Бронирование</h1>
+						<div class="buy__form buy-form">
+							<form action="" name="buy" id="buy-form">
+								<div class="buy-form__type buy-form-type">
+									<h2 class="buy-form-type__title">Выберите тип посещения</h2>
+									<input type="radio" name="type" id="type-1" checked>
+									<label for="type-1">Билет на разовое посещение</label>
+								</div>
+								<div class="buy-form__date buy-form-date">
+									<h2 class="buy-form-date__title">Выберите дату посещения</h2>
+									<div class="date-slider__btn-prev swiper-button-prev"></div>
+									<div class="date-slider__btn-next swiper-button-next"></div>
+									<div class="buy-form-date__slider date-slider swiper-container">
+										<div class="date-slider__wrapper swiper-wrapper">
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">01</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Ср</span>
+													<input type="radio" name="day" value="01" id="day-1">
+													<label for="day-1"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">02</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Чт</span>
+													<input type="radio" name="day" value="02" id="day-2">
+													<label for="day-2"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">03</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Пт</span>
+													<input type="radio" name="day" value="03" id="day-3">
+													<label for="day-3"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">04</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Сб</span>
+													<input type="radio" name="day" value="04" id="day-4">
+													<label for="day-4"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">05</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Вс</span>
+													<input type="radio" name="day" value="05" id="day-5">
+													<label for="day-5"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">06</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Пн</span>
+													<input type="radio" name="day" value="06" id="day-6">
+													<label for="day-6"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">07</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Вт</span>
+													<input type="radio" name="day" value="07" id="day-7">
+													<label for="day-7"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">08</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Ср</span>
+													<input type="radio" name="day" value="08" id="day-8">
+													<label for="day-8"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">09</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Чт</span>
+													<input type="radio" name="day" value="09" id="day-9">
+													<label for="day-9"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">10</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Пт</span>
+													<input type="radio" name="day" value="10" id="day-10">
+													<label for="day-10"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">11</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Сб</span>
+													<input type="radio" name="day" value="11" id="day-11">
+													<label for="day-11"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">12</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Вс</span>
+													<input type="radio" name="day" value="12" id="day-12">
+													<label for="day-12"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">13</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Пн</span>
+													<input type="radio" name="day" value="13" id="day-13">
+													<label for="day-13"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">14</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Вт</span>
+													<input type="radio" name="day" value="14" id="day-14">
+													<label for="day-14"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">15</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Ср</span>
+													<input type="radio" name="day" value="15" id="day-15">
+													<label for="day-15"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">16</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Чт</span>
+													<input type="radio" name="day" value="16" id="day-16">
+													<label for="day-16"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">17</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Пт</span>
+													<input type="radio" name="day" value="17" id="day-17">
+													<label for="day-17"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">18</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Сб</span>
+													<input type="radio" name="day" value="18" id="day-18">
+													<label for="day-18"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">19</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Вс</span>
+													<input type="radio" name="day" value="19" id="day-19">
+													<label for="day-19"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">20</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Пн</span>
+													<input type="radio" name="day" value="20" id="day-20">
+													<label for="day-20"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">21</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Вт</span>
+													<input type="radio" name="day" value="21" id="day-21">
+													<label for="day-21"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">22</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Ср</span>
+													<input type="radio" name="day" value="22" id="day-22">
+													<label for="day-22"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">23</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Чт</span>
+													<input type="radio" name="day" value="23" id="day-23">
+													<label for="day-23"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">24</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Пт</span>
+													<input type="radio" name="day" value="24" id="day-24">
+													<label for="day-24"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">25</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Сб</span>
+													<input type="radio" name="day" value="25" id="day-25">
+													<label for="day-25"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">26</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Вс</span>
+													<input type="radio" name="day" value="26" id="day-26">
+													<label for="day-26"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">27</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Пн</span>
+													<input type="radio" name="day" value="27" id="day-27">
+													<label for="day-27"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">28</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Вт</span>
+													<input type="radio" name="day" value="28" id="day-28">
+													<label for="day-28"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">29</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Ср</span>
+													<input type="radio" name="day" value="29" id="day-29">
+													<label for="day-29"></label>
+												</div>
+											</div>
+											<div class="date-slider__slide date-slide swiper-slide">
+												<div class="date-slide__body">
+													<p class="date-slide__day">30</p>
+													<p class="date-slide__month">Сентября</p>
+													<span class="date-slide__day-week">Чт</span>
+													<input type="radio" name="day" value="30" id="day-30">
+													<label for="day-30"></label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="buy-form__time buy-form-time">
+									<h3 class="buy-form-time__title">1 сентября 2021г., среда</h3>
+									<div class="time-slider__btn-prev swiper-button-prev"></div>
+									<div class="time-slider__btn-next swiper-button-next"></div>
+									<div class="buy-form-time__slider time-slider swiper-container">
+										<div class="time-slider__wrapper swiper-wrapper">
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">11:00</p>
+													<span class="time-slide__cost">100</span>
+													<input type="radio" name="time" id="time-1" value="11:00">
+													<label for="time-1"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">12:00</p>
+													<span class="time-slide__cost">66</span>
+													<input type="radio" name="time" id="time-2" value="12:00">
+													<label for="time-2"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">13:00</p>
+													<span class="time-slide__cost">61</span>
+													<input type="radio" name="time" id="time-3" value="13:00">
+													<label for="time-3"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">14:00</p>
+													<span class="time-slide__cost">61</span>
+													<input type="radio" name="time" id="time-4" value="14:00">
+													<label for="time-4"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">15:00</p>
+													<span class="time-slide__cost">61</span>
+													<input type="radio" name="time" id="time-5" value="15:00">
+													<label for="time-5"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">16:00</p>
+													<span class="time-slide__cost">61</span>
+													<input type="radio" name="time" id="time-6" value="16:00">
+													<label for="time-6"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">17:00</p>
+													<span class="time-slide__cost">61</span>
+													<input type="radio" name="time" id="time-7" value="17:00">
+													<label for="time-7"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">18:00</p>
+													<span class="time-slide__cost">61</span>
+													<input type="radio" name="time" id="time-8" value="18:00">
+													<label for="time-8"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">19:00</p>
+													<span class="time-slide__cost">61</span>
+													<input type="radio" name="time" id="time-9" value="19:00">
+													<label for="time-9"></label>
+												</div>
+											</div>
+											<div class="time-slider__slide time-slide swiper-slide">
+												<div class="time-slide__body">
+													<p class="time-slide__time">20:00</p>
+													<span class="time-slide__cost">61</span>
+													<input type="radio" name="time" id="time-10" value="20:00">
+													<label for="time-10"></label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="buy-form__number buy-form-number">
+									<h2 class="buy-form-number__title">Выберите количество билетов</h2>
+									<div class="buy-form-number__row-titles number-row-titles">
+										<p class="number-row-titles__category">Категория</p>
+										<p class="number-row-titles__cost">Цена руб.</p>
+										<p class="number-row-titles__number">Количество</p>
+										<p class="number-row-titles__sum">Сумма руб.</p>
+									</div>
+									<div class="buy-form-number__line"></div>
+									<div class="buy-form-number__row number-row">
+										<div class="number-row__category">
+											<span class="number-row-title-mobile">Категория</span>
+											<p class="number-row__category-top">Общая</p>
+											<p class="number-row__category-bottom">На 1 человека</p>
+										</div>
+										<p class="number-row__cost">
+											<span class="number-row-title-mobile">Цена</span>
+											500 руб.
+										</p>
+										<div class="number-row__number">
+											<span class="number-row-title-mobile">Количество</span>
+											<button class="number-row__smaller-btn smaller-btn"></button>
+											<span class="number-row__number-value number-value">0</span>
+											<button class="number-row__more-btn more-btn"></button>
+											<input type="text" name="number-general" class="number-input">
+										</div>
+										<p class="number-row__sum sum-value"><span
+												class="number-row-title-mobile">Сумма</span>2000 руб.</p>
+									</div>
+									<div class="buy-form-number__line"></div>
+									<div class="buy-form-number__row number-row">
+										<div class="number-row__category">
+											<span class="number-row-title-mobile">Категория</span>
+											<p class="number-row__category-top">Пенсионеры РФ</p>
+											<p class="number-row__category-bottom">На 1 человека</p>
+										</div>
+										<p class="number-row__cost">
+											<span class="number-row-title-mobile">Цена</span>500 руб.
+										</p>
+										<div class="number-row__number">
+											<span class="number-row-title-mobile">Количество</span>
+											<button class="number-row__smaller-btn smaller-btn"></button>
+											<span class="number-row__number-value number-value">0</span>
+											<button class="number-row__more-btn more-btn"></button>
+											<input type="text" name="number-pensioners" class="number-input">
+										</div>
+										<p class="number-row__sum sum-value">
+											<span class="number-row-title-mobile">Сумма</span>2000 руб.
+										</p>
+									</div>
+									<div class="buy-form-number__line"></div>
+									<div class="buy-form-number__row number-row">
+										<div class="number-row__category">
+											<span class="number-row-title-mobile">Категория</span>
+											<p class="number-row__category-top">Дети до 5 лет</p>
+											<p class="number-row__category-bottom">На 1 человека</p>
+										</div>
+										<p class="number-row__cost">
+											<span class="number-row-title-mobile">Цена</span>500 руб.
+										</p>
+										<div class="number-row__number">
+											<span class="number-row-title-mobile">Количество</span>
+											<button class="number-row__smaller-btn smaller-btn"></button>
+											<span class="number-row__number-value number-value">0</span>
+											<button class="number-row__more-btn more-btn"></button>
+											<input type="text" name="number-childrens" class="number-input">
+										</div>
+										<p class="number-row__sum sum-value"><span
+												class="number-row-title-mobile">Сумма</span>2000 руб.</p>
+									</div>
+									<div class="buy-form-number__line"></div>
+									<div class="buy-form-number__row number-row">
+										<div class="number-row__category">
+											<span class="number-row-title-mobile">Категория</span>
+											<p class="number-row__category-top">Льготники</p>
+											<p class="number-row__category-bottom">На 1 человека</p>
+											<button class="number-row__category-btn"></button>
+										</div>
+										<p class="number-row__cost">
+											<span class="number-row-title-mobile">Цена</span>500 руб.
+										</p>
+										<div class="number-row__number">
+											<span class="number-row-title-mobile">Количество</span>
+											<button class="number-row__smaller-btn smaller-btn"></button>
+											<span class="number-row__number-value number-value">0</span>
+											<button class="number-row__more-btn more-btn"></button>
+											<input type="text" name="number-beneficiaries" class="number-input">
+										</div>
+										<p class="number-row__sum sum-value"><span
+												class="number-row-title-mobile">Сумма</span>2000 руб.</p>
+									</div>
+									<div class="buy-form-number__line"></div>
+									<div class="buy-form-number__general-row">
+										<div class="buy-form-number__date-time">
+											<p class="buy-form-number__date">Дата: <span>1 сентября 2021 г., среда</span></p>
+											<p class="buy-form-number__time">Время: <span>18:00</span></p>
+										</div>
+										<div class="buy-form-number__general-sum-group">
+											<p class="buy-form-number__sum">Общая стоимость: <span>8 000 руб.</span></p>
+											<p class="buy-form-number__discount">Скидка: <span>1 000 руб.</span></p>
+										</div>
+									</div>
+								</div>
+								<div class="buy-form__general buy-form-general">
+									<div class="buy-form-general__row">
+										<input type="text" name="name" placeholder="ФИО">
+										<input type="text" name="phone" placeholder="Телефон">
+									</div>
+									<div class="buy-form-general__row">
+										<input type="text" name="email" placeholder="Email">
+										<input type="text" name="email-repeat" placeholder="Повторить email">
+									</div>
+								</div>
+								<div class="buy-form__bottom">
+									<div class="buy-form__checkboxes">
+										<input type="checkbox" name="agree-rules" id="agree-rules" checked>
+										<label for="agree-rules" class="buy-form__label">Согласен с условиями
+											пользовательского соглашения и правилами покупки билетов</label>
+										<input type="checkbox" name="agree-info" id="agree-info" checked>
+										<label for="agree-info" class="buy-form__label">Согласен на получение рекламной
+											информации</label>
+									</div>
+									<div class="buy-form__bottom-group">
+										<p class="buy-form__to-pay">К оплате: <span>8 000 руб.</span></p>
+										<button class="buy-form__btn">Купить билет</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__top footer-top">
+		<div class="footer-top__container container">
+			<div class="footer-top__content">
+				<div class="footer-top__logo">
+					<img src="img/footer_logo.png" class="footer-desktop-img" alt="">
+					<img src="img/header-logo.png" class="footer-mobile-img" alt="">
+				</div>
+				<div class="footer-top__contacts footer-contacts">
+					<h3 class="footer-contacts__title">Контакты</h3>
+					<p class="footer-contacts__item footer-contacts__adress">Социалистическая ул., 21,<br>
+						Санкт-Петербург, Ленинградская обл., 188662</p>
+					<p class="footer-contacts__item footer-contacts__time">Пн-Пт с 11:00 до 20:00</p>
+					<a href="mailto:info@zarenkovgallery.ru"
+						class="footer-contacts__item footer-contacts__email">info@zarenkovgallery.ru</a>
+					<a href="tel:+78127770120" class="footer-contacts__item footer-contacts__phone">+7 (812) 777-01-20</a>
+				</div>
+				<div class="footer-top__menu footer-menu">
+					<h3 class="footer-menu__title">Меню</h3>
+					<ul class="footer-menu__list">
+						<li class="footer-menu__item"><a href="index.html" class="footer-menu__link">Главная</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Каталог</a></li>
+						<li class="footer-menu__item"><a href="events.html" class="footer-menu__link">События</a></li>
+						<li class="footer-menu__item"><a href="news.html" class="footer-menu__link">Новости</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Аренда</a></li>
+						<li class="footer-menu__item"><a href="contacts.html" class="footer-menu__link">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer-top__social footer-social">
+					<h3 class="footer-social__title">Соц.сети</h3>
+					<ul class="footer-social__list">
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link"></a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link"></a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link"></a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link"></a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-top__form footer-form">
+					<form action="" name="footer-form">
+						<h3 class="footer-form__title">Подписаться на рассылку</h3>
+						<input type="text" name="email" class="footer-email" placeholder="Ваш email">
+						<button class="footer-form__btn">Подписаться</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom footer-bottom">
+		<div class="footer-bottom__container container">
+			<div class="footer-bottom__content">
+				<p class="footer-bottom__copyright">© Компания “Галерея”, 2021</p>
+				<a href="#" class="footer-bottom__link">Политика конфеденциальности</a>
+			</div>
+		</div>
+	</div>
+</footer>
+	</div>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/buy-ticket.js"></script>
+</body>
+
+</html>
