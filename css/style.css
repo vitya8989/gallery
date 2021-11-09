@@ -456,6 +456,9 @@ body.scroll-lock {
   display: flex
 }
 .main-events-slide__img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 478px;
+  flex: 0 0 478px;
   margin: 0 29px 0 0;
   border-radius: 10px;
   overflow: hidden
@@ -2597,7 +2600,8 @@ body.scroll-lock {
   .main-events-slide__img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 289px;
-    flex: 0 0 289px
+    flex: 0 0 289px;
+    height: 306px
   }
   .main-events-slide__line {
     width: 400px
@@ -2777,7 +2781,8 @@ body.scroll-lock {
     display: block
   }
   .main-events-slide__img {
-    width: 100%
+    width: 100%;
+    height: auto
   }
   .main-events-slide__content {
     margin: 30px 0 0 0
