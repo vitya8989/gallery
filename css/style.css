@@ -1405,7 +1405,9 @@ body.scroll-lock {
   height: 15px;
   background-color: #fff;
   left: 0;
-  top: 2px
+  top: 2px;
+  border-radius: 50%;
+  border: 1px solid #c6c6c6
 }
 .contacts-form__label::after {
   content: "";
@@ -2979,6 +2981,12 @@ body.scroll-lock {
   .gallery-slide__container {
     padding: 68px 30px 165px
   }
+  .buy-form-date .date-slider__btn-prev.swiper-button-prev {
+    display: none
+  }
+  .buy-form-time .time-slider__btn-prev.swiper-button-prev {
+    display: none
+  }
 }
 @media (max-width:750px) {
   .contacts-form__form {
@@ -3273,7 +3281,7 @@ body.scroll-lock {
     height: 292px
   }
   .buy__container {
-    max-width: 350px
+    max-width: 420px
   }
   .buy__content {
     padding: 15px 0 150px
@@ -3288,7 +3296,8 @@ body.scroll-lock {
     margin: 0
   }
   .buy-form__btn {
-    width: 290px
+    width: 290px;
+    margin: 20px auto 0
   }
   .buy-form__btn:hover {
     background-color: #d60b51
@@ -3382,11 +3391,5 @@ body.scroll-lock {
   .buy__container {
     max-width: 320px;
     padding: 0 15px
-  }
-  .buy-form-date .date-slider__btn-prev.swiper-button-prev {
-    display: none
-  }
-  .buy-form-time .time-slider__btn-prev.swiper-button-prev {
-    display: none
   }
 }

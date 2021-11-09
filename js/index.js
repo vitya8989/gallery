@@ -7,6 +7,7 @@ burger.onclick = function () {
 }
 ;
 let gallerySlider = new Swiper('.gallery-slider', {
+	speed: 600,
 	slidesPerView: 1,
 	navigation: {
 		nextEl: '.gallery-slider__btn-next',
@@ -28,6 +29,7 @@ reinitSwiper(gallerySlider);
 
 ;
 let mainEventsSlider = new Swiper('.main-events-slider', {
+	speed: 600,
 	slidesPerView: 1,
 	spaceBetween: 20,
 	navigation: {
@@ -48,6 +50,7 @@ mainEventsSlider.on('slideChange', function () {
 reinitSwiper(mainEventsSlider);
 ;
 let aboutSlider = new Swiper('.about-slider', {
+	speed: 600,
 	slidesPerView: 1,
 	navigation: {
 		nextEl: '.about-slider__btn-next',

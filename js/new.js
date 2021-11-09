@@ -25,6 +25,7 @@ window.onresize = function () {
 ;
 
 let eventSlider = new Swiper('.event-slider', {
+	speed: 600,
 	slidesPerView: 1,
 	navigation: {
 		nextEl: '.event-slider__btn-next',
