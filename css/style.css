@@ -1409,7 +1409,6 @@ body.scroll-lock {
   background-color: #fff;
   left: 0;
   top: 2px;
-  border-radius: 50%;
   border: 1px solid #c6c6c6
 }
 .contacts-form__label::after {
@@ -1782,36 +1781,36 @@ body.scroll-lock {
   color: #181f2c;
   margin: 17px 0 0 -3px
 }
-.events__heading {
-  margin: 22px 0 0 0
+.events__tabs {
+  margin: 20px 0 0 0
 }
-.events__heading:nth-child(4) {
-  margin: 36px 0 0 0
-}
-.heading__title-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center
-}
-.heading__title {
+.events__tab {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .1em;
   color: #c6c6c6;
-  margin: 0 10px 0 0;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto
+  margin: 0 20px 0 0;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s
 }
-.heading__line {
-  width: 100%;
-  height: 1px;
-  background-color: #dce8ef
+.events__tab:hover {
+  color: #d60b51
+}
+.events__tab.disabled-btn {
+  pointer-events: none;
+  opacity: .5
+}
+.events__heading {
+  margin: 22px 0 0 0
+}
+.events__heading:nth-child(4) {
+  margin: 36px 0 0 0
+}
+.heading {
+  display: none
 }
 .heading__items {
   margin: 38px 0 0 0
@@ -1821,6 +1820,9 @@ body.scroll-lock {
 }
 .heading__item:first-child {
   margin: 0
+}
+.heading.show-heading {
+  display: block
 }
 .heading-item {
   display: -webkit-box;
@@ -2261,6 +2263,7 @@ body.scroll-lock {
   background-color: #c6c6c6
 }
 .buy-form-number__general-row {
+  margin: 3px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2300,7 +2303,6 @@ body.scroll-lock {
   margin: 3px 0 0 0
 }
 .buy-form-number__sum {
-  font-family: "Helvetica Neue Condensed";
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -2308,7 +2310,6 @@ body.scroll-lock {
   text-align: right
 }
 .buy-form-number__discount {
-  font-family: "Helvetica Neue Condensed";
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -2985,6 +2986,9 @@ body.scroll-lock {
   }
   .gallery-slide__container {
     padding: 68px 30px 165px
+  }
+  .events__tabs {
+    margin: 15px 0 0 0
   }
   .buy-form-date .date-slider__btn-prev.swiper-button-prev {
     display: none

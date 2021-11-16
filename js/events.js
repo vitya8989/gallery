@@ -23,3 +23,17 @@ window.onresize = function () {
 	}
 }
 ;
+
+let showHeadingBtn = document.querySelectorAll('.show-heading-btn');
+let heading = document.querySelectorAll('.heading');
+
+for (let i = 0; i < showHeadingBtn.length; i++) {
+	showHeadingBtn[i].onclick = function () {
+		for (let j = 0; j < showHeadingBtn.length; j++) {
+			showHeadingBtn[j].classList.remove('disabled-btn');
+			heading[j].classList.remove('show-heading');
+		}
+		showHeadingBtn[i].classList.add('disabled-btn');
+		heading[i].classList.add('show-heading');
+	}
+}
