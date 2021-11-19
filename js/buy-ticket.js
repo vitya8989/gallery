@@ -93,20 +93,49 @@ let smallerBtn = document.querySelectorAll('.smaller-btn');
 let moreBtn = document.querySelectorAll('.more-btn');
 let numberValue = document.querySelectorAll('.number-value');
 let numberInput = document.querySelectorAll('.number-input');
+let numberRowCost = document.querySelectorAll('.number-row__cost');
+let sumValue = document.querySelectorAll('.sum-value');
+let allSum = document.querySelector('.all-sum');
+let sumTable = 0;
+let generalOutput = document.querySelector('.general-output');
 
 for (let i = 0; i < smallerBtn.length; i++) {
 	numberInput[i].value = numberValue[i].textContent;
-	smallerBtn[i].onclick = function () {
+	smallerBtn[i].onclick = function (e) {
+		e.preventDefault();
 		if (numberValue[i].textContent > 0) {
 			numberValue[i].textContent = numberValue[i].textContent - 1;
 			numberInput[i].value = numberValue[i].textContent;
+			let cost = numberRowCost[i].textContent.replace(/\D/g, '');
+			let sumRow = numberInput[i].value * cost;
+			sumValue[i].textContent = `${sumRow} руб.`;
+			for (let j = 0; j < sumValue.length; j++) {
+				let sum = +sumValue[j].textContent.replace(/\D/g, '');
+				sumTable += sum;
+			}
+			allSum.textContent = `${sumTable} руб.`;
+			sumTable = 0;
+			generalOutput.textContent = allSum.textContent;
 		}
 	}
-	moreBtn[i].onclick = function () {
+	moreBtn[i].onclick = function (e) {
+		e.preventDefault();
 		numberValue[i].textContent++;
 		numberInput[i].value = numberValue[i].textContent;
+		let cost = numberRowCost[i].textContent.replace(/\D/g, '');
+		let sumRow = numberInput[i].value * cost;
+		sumValue[i].textContent = `${sumRow} руб.`;
+		for (let j = 0; j < sumValue.length; j++) {
+			let sum = +sumValue[j].textContent.replace(/\D/g, '');
+			sumTable += sum;
+		}
+		allSum.textContent = `${sumTable} руб.`;
+		sumTable = 0;
+		generalOutput.textContent = allSum.textContent;
 	}
 }
+
+
 
 let onlyLetterRus = document.querySelectorAll('.only-letter-rus');
 let onlyNumber = document.querySelectorAll('.only-number');
@@ -175,3 +204,64 @@ for (let i = 0; i < timeSlideQuestion.length; i++) {
 		timeSlideAnswer[i].classList.remove('show-answer');
 	};
 }
+
+let dateSlideBody = document.querySelectorAll('.date-slide__body');
+let dateSlideDay = document.querySelectorAll('.date-slide__day');
+let dateSlideMonth = document.querySelectorAll('.date-slide__month');
+let dateSlideDayWeek = document.querySelectorAll('.date-slide__day-week');
+let dateOutput = document.querySelector('.date-output');
+
+
+for (let i = 0; i < dateSlideBody.length; i++) {
+	dateSlideBody[i].onclick = function () {
+		let dayWeek;
+		if (dateSlideDayWeek[i].textContent == 'Пн') {
+			dayWeek = 'Понедельник';
+		}
+		if (dateSlideDayWeek[i].textContent == 'Вт') {
+			dayWeek = 'Вторник';
+		}
+		if (dateSlideDayWeek[i].textContent == 'Ср') {
+			dayWeek = 'Среда';
+		}
+		if (dateSlideDayWeek[i].textContent == 'Чт') {
+			dayWeek = 'Четверг';
+		}
+		if (dateSlideDayWeek[i].textContent == 'Пт') {
+			dayWeek = 'Пятница';
+		}
+		if (dateSlideDayWeek[i].textContent == 'Сб') {
+			dayWeek = 'Суббота';
+		}
+		if (dateSlideDayWeek[i].textContent == 'Вс') {
+			dayWeek = 'Воскресенье';
+		}
+		dateOutput.textContent = `${dateSlideDay[i].textContent} ${dateSlideMonth[i].textContent} 2021г., ${dayWeek}`;
+	}
+}
+
+let timeOutput = document.querySelector('.time-output');
+let timeSlideBody = document.querySelectorAll('.time-slide__body');
+let timeSlideTime = document.querySelectorAll('.time-slide__time');
+
+for (let i = 0; i < timeSlideBody.length; i++) {
+	timeSlideBody[i].onclick = function () {
+		timeOutput.textContent = timeSlideTime[i].textContent;
+	}
+}
+
+let beneficiariesBtn = document.querySelector('.beneficiaries-btn');
+let beneficiaries = document.querySelector('.beneficiaries');
+
+beneficiariesBtn.onclick = function (e) {
+	e.preventDefault();
+	if (beneficiaries.classList.contains('opened')) {
+		beneficiaries.classList.remove('opened');
+		beneficiaries.style.maxHeight = 0;
+	} else {
+		beneficiaries.classList.add('opened');
+		beneficiaries.style.maxHeight = beneficiaries.scrollHeight + 'px';
+	}
+	beneficiariesBtn.classList.toggle('active-btn-show');
+}
+
