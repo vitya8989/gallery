@@ -22,7 +22,36 @@ window.onresize = function () {
 		footerTopContent.insertBefore(footerMenu, footerSocial);
 	}
 }
-;
+
+let onlyEng = document.querySelectorAll('.only-eng');
+
+for (let i = 0; i < onlyEng.length; i++) {
+	onlyEng[i].addEventListener('keyup', function () {
+		this.value = this.value.replace(/[а-яё]/ig, '');
+	});
+}
+
+let footerFormForm = document.querySelector('.footer-form-form');
+let footerEmail = document.querySelector('.footer-email');
+let footerPopup = document.querySelector('.footer-popup');
+let footerPopupClose = document.querySelector('.footer-popup__close');
+
+footerFormForm.onsubmit = function (e) {
+	e.preventDefault();
+	if (footerEmail.value == '') {
+		footerEmail.classList.add('error-input');
+	} else {
+		footerPopup.classList.add('popup-open');
+	}
+}
+
+footerPopupClose.onclick = function () {
+	footerPopup.classList.remove('popup-open');
+}
+
+footerEmail.onfocus = function () {
+	footerEmail.classList.remove('error-input');
+};
 
 let contactsTitle = document.querySelector('.contacts__title');
 let contactsRow = document.querySelector('.contacts__row');
@@ -58,4 +87,55 @@ function init() {
 	}
 	);
 	myMap.geoObjects.add(placemark);
+}
+
+let onlyLetterRus = document.querySelectorAll('.only-letter-rus');
+let onlyNumber = document.querySelectorAll('.only-number');
+
+
+for (let i = 0; i < onlyLetterRus.length; i++) {
+	onlyLetterRus[i].addEventListener('keyup', function () {
+		this.value = this.value.replace(/[\w]/g, '');
+	});
+}
+
+
+for (let i = 0; i < onlyNumber.length; i++) {
+	onlyNumber[i].addEventListener('keyup', function () {
+		this.value = this.value.replace(/[^0-9,\s,+]/g, "");
+	});
+}
+
+let contactsForm = document.getElementById('contacts-form');
+let contactsName = document.querySelector('.contacts-name');
+let contactsTel = document.querySelector('.contacts-tel');
+let contactsEmail = document.querySelector('.contacts-email');
+let contactsPopup = document.querySelector('.contacts-popup');
+let contactsPopupClose = document.querySelector('.contacts-popup__close');
+
+contactsForm.onsubmit = function (e) {
+	e.preventDefault();
+	if (contactsName.value == '') {
+		contactsName.classList.add('error-input');
+	} else if (contactsTel.value == '') {
+		contactsTel.classList.add('error-input');
+	} else if (contactsEmail.value == '') {
+		contactsEmail.classList.add('error-input');
+	} else {
+		contactsPopup.classList.add('popup-open');
+	}
+}
+
+contactsName.onfocus = function () {
+	contactsName.classList.remove('error-input');
+}
+contactsTel.onfocus = function () {
+	contactsTel.classList.remove('error-input');
+}
+contactsEmail.onfocus = function () {
+	contactsEmail.classList.remove('error-input');
+}
+
+contactsPopupClose.onclick = function () {
+	contactsPopup.classList.remove('popup-open');
 }

@@ -95,11 +95,12 @@
 						<h2 class="contacts-form__title title">Оставьте заявку</h2>
 						<p class="contacts-form__subtitle">И мы свяжемся с Вами в ближайшее время</p>
 						<div class="contacts-form__form">
-							<form action="" name="contacts__form">
+							<form name="contacts__form" id="contacts-form">
 								<div class="contacts-form__row">
-									<input type="text" name="name" placeholder="Ваше имя">
-									<input type="tel" name="телефон" placeholder="Ваш номер телефона">
-									<input type="text" name="email" placeholder="Ваш email">
+									<input type="text" name="name" placeholder="Ваше имя" class="contacts-name only-letter-rus">
+									<input type="tel" name="телефон" placeholder="Ваш номер телефона"
+										class="contacts-tel only-number">
+									<input type="text" name="email" placeholder="Ваш email" class="contacts-email only-eng">
 								</div>
 								<textarea class="contacts-form__textarea" name="question" rows="5"
 									placeholder="Ваш вопрос"></textarea>
@@ -169,9 +170,9 @@
 					</ul>
 				</div>
 				<div class="footer-top__form footer-form">
-					<form action="" name="footer-form">
+					<form name="footer-form" class="footer-form-form">
 						<h3 class="footer-form__title">Подписаться на рассылку</h3>
-						<input type="text" name="email" class="footer-email" placeholder="Ваш email">
+						<input type="text" name="email" class="footer-email only-eng" placeholder="Ваш email">
 						<button class="footer-form__btn">Подписаться</button>
 					</form>
 				</div>
@@ -186,7 +187,23 @@
 			</div>
 		</div>
 	</div>
+	<div class="footer-popup popup">
+		<div class="footer-popup__body popup__body">
+			<span class="footer-popup__close popup__close"></span>
+			<h2 class="footer-popup__title popup__title">Сообщение отправлено</h2>
+			<p class="footer-popup__text popup__text">Спасибо за заказ. менеджер свяжется с вами
+				в ближайшее время</p>
+		</div>
+	</div>
 </footer>
+		<div class="contacts-popup popup">
+			<div class="contacts-popup__body popup__body">
+				<span class="contacts-popup__close popup__close"></span>
+				<h2 class="contacts-popup__title popup__title">Сообщение отправлено</h2>
+				<p class="contacts-popup__text popup__text">Спасибо за заказ. менеджер свяжется с вами
+					в ближайшее время</p>
+			</div>
+		</div>
 	</div>
 	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/contacts.js"></script>

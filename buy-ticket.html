@@ -344,6 +344,10 @@
 													<span class="time-slide__cost">100</span>
 													<input type="radio" name="time" id="time-1" value="11:00">
 													<label for="time-1"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -352,6 +356,10 @@
 													<span class="time-slide__cost">66</span>
 													<input type="radio" name="time" id="time-2" value="12:00">
 													<label for="time-2"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -360,6 +368,10 @@
 													<span class="time-slide__cost">61</span>
 													<input type="radio" name="time" id="time-3" value="13:00">
 													<label for="time-3"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -368,6 +380,10 @@
 													<span class="time-slide__cost">61</span>
 													<input type="radio" name="time" id="time-4" value="14:00">
 													<label for="time-4"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -376,6 +392,10 @@
 													<span class="time-slide__cost">61</span>
 													<input type="radio" name="time" id="time-5" value="15:00">
 													<label for="time-5"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -384,6 +404,10 @@
 													<span class="time-slide__cost">61</span>
 													<input type="radio" name="time" id="time-6" value="16:00">
 													<label for="time-6"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -392,6 +416,10 @@
 													<span class="time-slide__cost">61</span>
 													<input type="radio" name="time" id="time-7" value="17:00">
 													<label for="time-7"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -400,6 +428,10 @@
 													<span class="time-slide__cost">61</span>
 													<input type="radio" name="time" id="time-8" value="18:00">
 													<label for="time-8"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -408,6 +440,10 @@
 													<span class="time-slide__cost">61</span>
 													<input type="radio" name="time" id="time-9" value="19:00">
 													<label for="time-9"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 											<div class="time-slider__slide time-slide swiper-slide">
@@ -416,6 +452,10 @@
 													<span class="time-slide__cost">61</span>
 													<input type="radio" name="time" id="time-10" value="20:00">
 													<label for="time-10"></label>
+													<span class="time-slide__question">?</span>
+													<p class="time-slide__answer">Тут будет выскакивать
+														подсказка текстом и
+														возможно ссылкой</p>
 												</div>
 											</div>
 										</div>
@@ -526,12 +566,13 @@
 								</div>
 								<div class="buy-form__general buy-form-general">
 									<div class="buy-form-general__row">
-										<input type="text" name="name" placeholder="ФИО">
-										<input type="text" name="phone" placeholder="Телефон">
+										<input type="text" name="name" placeholder="ФИО" class="buy-form-name only-letter-rus">
+										<input type="text" name="phone" placeholder="Телефон" class="buy-form-tel only-number">
 									</div>
 									<div class="buy-form-general__row">
-										<input type="text" name="email" placeholder="Email">
-										<input type="text" name="email-repeat" placeholder="Повторить email">
+										<input type="text" name="email" placeholder="Email" class="buy-form-email only-eng">
+										<input type="text" name="email-repeat" placeholder="Повторить email"
+											class="buy-form-email-repeat only-eng">
 									</div>
 								</div>
 								<div class="buy-form__bottom">
@@ -603,9 +644,9 @@
 					</ul>
 				</div>
 				<div class="footer-top__form footer-form">
-					<form action="" name="footer-form">
+					<form name="footer-form" class="footer-form-form">
 						<h3 class="footer-form__title">Подписаться на рассылку</h3>
-						<input type="text" name="email" class="footer-email" placeholder="Ваш email">
+						<input type="text" name="email" class="footer-email only-eng" placeholder="Ваш email">
 						<button class="footer-form__btn">Подписаться</button>
 					</form>
 				</div>
@@ -620,7 +661,23 @@
 			</div>
 		</div>
 	</div>
+	<div class="footer-popup popup">
+		<div class="footer-popup__body popup__body">
+			<span class="footer-popup__close popup__close"></span>
+			<h2 class="footer-popup__title popup__title">Сообщение отправлено</h2>
+			<p class="footer-popup__text popup__text">Спасибо за заказ. менеджер свяжется с вами
+				в ближайшее время</p>
+		</div>
+	</div>
 </footer>
+		<div class="buy-ticket-popup popup">
+			<div class="buy-ticket-popup__body popup__body">
+				<span class="buy-ticket-popup__close popup__close"></span>
+				<h2 class="buy-ticket-popup__title popup__title">Сообщение отправлено</h2>
+				<p class="buy-ticket-popup__text popup__text">Спасибо за заказ. менеджер свяжется с вами
+					в ближайшее время</p>
+			</div>
+		</div>
 	</div>
 	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/buy-ticket.js"></script>

@@ -76,13 +76,15 @@ if (window.innerWidth < 1051) {
 	howFindContent.append(howFindTitle);
 }
 
-window.onresize = function () {
+window.addEventListener("resize", function () {
 	if (window.innerWidth < 1051) {
 		howFindContent.append(howFindTitle);
 	} else {
 		howFindBody.prepend(howFindTitle);
 	}
-}
+});
+
+
 
 let scriptMap = document.createElement('script');
 scriptMap.src = 'https://api-maps.yandex.ru/2.1/?apikey=dd0f5e76-e8bb-42be-b558-f7af3b491cd2&lang=ru_RU';
@@ -119,7 +121,36 @@ window.onresize = function () {
 		footerTopContent.insertBefore(footerMenu, footerSocial);
 	}
 }
-;
+
+let onlyEng = document.querySelectorAll('.only-eng');
+
+for (let i = 0; i < onlyEng.length; i++) {
+	onlyEng[i].addEventListener('keyup', function () {
+		this.value = this.value.replace(/[а-яё]/ig, '');
+	});
+}
+
+let footerFormForm = document.querySelector('.footer-form-form');
+let footerEmail = document.querySelector('.footer-email');
+let footerPopup = document.querySelector('.footer-popup');
+let footerPopupClose = document.querySelector('.footer-popup__close');
+
+footerFormForm.onsubmit = function (e) {
+	e.preventDefault();
+	if (footerEmail.value == '') {
+		footerEmail.classList.add('error-input');
+	} else {
+		footerPopup.classList.add('popup-open');
+	}
+}
+
+footerPopupClose.onclick = function () {
+	footerPopup.classList.remove('popup-open');
+}
+
+footerEmail.onfocus = function () {
+	footerEmail.classList.remove('error-input');
+};
 
 function addNull() {
 	let swiperPaginationCurrent = document.querySelectorAll('.swiper-pagination-current');
